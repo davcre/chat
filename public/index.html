@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/emojione/2.2.6/assets/css/emojione.min.css"/>
+
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+
+    <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.6/lib/js/emojione.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> 
+
+  </head>
+
+  <body>
+
+  <main id="app">
+    <div class="container h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-12 form" v-if="!joined">
+
+          <div class="input-group">
+            <input
+              type="email"
+              v-model.trim="email"
+              class="form-control name"
+              placeholder="Please fill in your email address">
+            </input>
+          </div>
+          
+          <div class="input-group">
+            <input
+              type="text"
+              v-model.trim="username"
+              class="form-control name"
+              placeholder="Please fill in your username">
+            </input>
+          </div>
+
+          <div class="input-group-append">
+            <button class="input-group-text join_btn" @click="join">
+              Join
+              <i class="material-icons right">done</i>
+            </button>
+          </div> 
+        </div>
+
+        <div class="chat" v-if="joined">
+         <div class="card">
+          <div class="card-header msg_head">
+           <div class="d-flex bd-highlight justify-content-center">
+           <a href="/"> General </a>
+           </div>
+          </div>
+
+          <div class="card-body msg_card_body">
+            <div class="msg_container" v-html="chatContent"></div>
+          </div>
+
+          <div class="card-footer">
+            <div class="input-group">
+              <input 
+                type="text"
+                v-model="newMessage"
+                class="form-control type_msg"
+                @keyup.enter="send">
+            </div>
+
+            <div class="input-group-append">
+              <button class="input-group-text send_btn" @click="send">
+              Send
+              <i class="material-icons right">chat</i>
+              </button>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+     </div>
+   </main>
+  </body>
+
+  <script src="assets/app.js"></script>
+</html>

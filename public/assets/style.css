@@ -1,0 +1,103 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background: #37383e;
+  background: -webkit-linear-gradient(to right, #424552, #5b5d67, #424552);
+  background: linear-gradient(to right, #424552, #5b5d67, #424552);
+}
+
+#app {
+  height: 100%;
+}
+
+.chat {
+  margin: 15px;
+}
+
+.form {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.card {
+  height: 500px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.msg_head {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+}
+
+.msg_card_body {
+  overflow-y: auto;
+}
+
+.card-header {
+  border-radius: 15px 15px 0 0;
+  border-bottom: 0;
+}
+
+.card-footer {
+  border-radius: 0 0 15px 15px;
+  border-top: 0;
+}
+
+.type_msg {
+  background-color: rgba(90, 14, 190, 0.5);
+  border: 0;
+  color: white;
+  height: 60px;
+  overflow-y: auto;
+}
+.type_msg:focus {
+  box-shadow: none;
+  outline: 0px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.send_btn {
+  border-radius: 15px 15px 15px 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.send_btn:focus {
+  background-color: rgba(150, 151, 166, 1);
+}
+
+.join_btn {
+  border-radius: 15px 15px 15px 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0;
+  color: white;
+  cursor: pointer;
+}
+.join_btn:focus {
+  background-color: rgba(150, 151, 166, 1);
+}
+
+.msg_container {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #9697a6;
+  padding: 10px 15px;
+  position: relative;
+  min-width: 100px;
+  line-height: 1.1rem;
+}
+
+.msg_head {
+  position: relative;
+}
+
+.container {
+  align-content: center;
+}
